@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/style.css">
+    <title>Create Job</title>
+</head>
+<body>
+    <div class="full-page">
+    <nav>
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="/img/logo.png" class="logo" alt="logo" />
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="/home">Home</a>
+                </li>
+                <li>
+                    <a href="/createjob">Create Job</a>
+                </li>
+                <li>
+                    <a href="/updatedelete">Update/Delete</a>
+                </li>
+                <li>
+                    <a href="/viewjob">View</a>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            </ul>
+            <!-- social media -->
+        </div>
+    </nav>
+    
+    <div id='login-form' class='login-page'>
+        <div class="form-box" style="height: 560px;">
+            <h3 style="font-family: Tahoma, Geneva, Verdana, sans-serif; text-align: center;">Update Job</h3>
+            <form action="/updatejob" method="POST" id='register' class='input-group-register' style="top: 60px;">
+                <input type="hidden" name="_id" value="{{job._id}}">
+                <input type='text' class='input-field'placeholder='Industry Name' name="industry" value="{{job.industry}}" required style="margin-bottom: 15px;">
+                <h5>Job Type</h5>
+                <input type="radio" id="html" name="jobtype" value="Internship">
+                <label style="font-size: 15px;">Internship</label><br>
+                <input type="radio" id="css" name="jobtype" value="FullTime">
+                <label style="font-size: 15px;">FullTime</label><br>
+                <input type="radio" id="css" name="jobtype" value="PartTime">
+                <label style="font-size: 15px;">PartTime</label><br>
+                <h5 style="margin-top: 10px;">Job Field</h5>
+                <input type="radio" id="css" name="jobfield" value="Web Development">
+                <label style="font-size: 15px;">Web Development</label><br>
+                <input type="radio" id="css" name="jobfield" value="App Development">
+                <label style="font-size: 15px;">App Development</label><br>
+                <input type='textfield'class='input-field'placeholder='Job Description' name="jobdescrip" value="{{job.jobdescrip}}" required>
+                <input type='text'class='input-field'placeholder='Highest Qualification Required' name="highqualification" value="{{job.highqualification}}" required>
+                <input type='number'class='input-field'placeholder='Salary Rs.' name="salary" value="{{job.salary}}" required>
+                <input type='number'class='input-field'placeholder='Contact' name="jobcontact" value="{{job.jobcontact}}" required>
+                <button type='submit'class='submit-btn'>UPDATE</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>View Jobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    {{>navbar}}
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Industry</th>
+                <th>Job Type</th>
+                <th>Job Field</th>
+                <th>Job Description</th>
+                <th>Highest Qualification</th>
+                <th>Salary</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list}}
+            <tr>
+                <td>{{this.industry}}</td>
+                <td>{{this.jobtype}}</td>
+                <td>{{this.jobfield}}</td>
+                <td>{{this.jobdescrip}}</td>
+                <td>{{this.highqualification}}</td>
+                <td>{{this.salary}}</td>
+                <td>{{this.jobcontact}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

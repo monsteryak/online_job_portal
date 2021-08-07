@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>Create Job</title>
+</head>
+<body>
+    {{>navbar}}
+    
+    <div id='login-form' class='login-page'>
+        <div class="form-box" style="height: 560px;">
+            <h3 style="font-family: Tahoma, Geneva, Verdana, sans-serif; text-align: center;">Post Job</h3>
+            <form action="/createjob" method="POST" id='register' class='input-group-register' style="top: 60px;">
+                <input type='text' class='input-field'placeholder='Industry Name' name="industry" required style="margin-bottom: 15px;">
+                <h5>Job Type</h5>
+                <input type="radio" id="html" name="jobtype" value="Internship">
+                <label style="font-size: 15px;">Internship</label><br>
+                <input type="radio" id="css" name="jobtype" value="FullTime">
+                <label style="font-size: 15px;">FullTime</label><br>
+                <input type="radio" id="css" name="jobtype" value="PartTime">
+                <label style="font-size: 15px;">PartTime</label><br>
+                <h5 style="margin-top: 10px;">Job Field</h5>
+                <input type="radio" id="css" name="jobfield" value="Web Development">
+                <label style="font-size: 15px;">Web Development</label><br>
+                <input type="radio" id="css" name="jobfield" value="App Development">
+                <label style="font-size: 15px;">App Development</label><br>
+                <input type='textfield'class='input-field'placeholder='Job Description' name="jobdescrip" required>
+                <input type='text'class='input-field'placeholder='Highest Qualification Required' name="highqualification" required>
+                <input type='number'class='input-field'placeholder='Salary Rs.' name="salary" required>
+                <input type='number'class='input-field'placeholder='Contact' name="jobcontact" required>
+                <button type='submit'class='submit-btn'>Post</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

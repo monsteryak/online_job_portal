@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>Online Job Portal</title>
+ 
+</head>
+<body>
+    <nav>
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <h2 style="font-family: Tahoma, Geneva, Verdana, sans-serif">Welcome</h2>
+            </div>
+            <!-- links -->
+            <div class="nav-header">
+                <img src="img/logo.png" class="logo" alt="logo" />
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- social media -->
+        </div>
+    </nav>
+    
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    
+            </div>
+            <form action="/register" method="POST" id='register' class='input-group-register'>
+                <input type='text'class='input-field'placeholder='First Name' name="regFname" required>
+                <input type='text'class='input-field'placeholder='Last Name ' name="regLname" required>
+                <input type='email'class='input-field'placeholder='Email Id' name="regEmail" required>
+                <input type='phone'class='input-field'placeholder='Mobile No' name="regMobile" required>
+                <input type='number'class='input-field'placeholder='Age' name="regAge" required>
+                <input type='password'class='input-field'placeholder='Enter Password' name="regPass" required>
+                <input type='password'class='input-field'placeholder='Confirm Password' name="regCpass"  required>
+                <button type='submit'class='submit-btn'>Register</button>
+            </form>
+            <form action="/login" method="POST" id='login' class='input-group-login'>
+                <input type='email'class='input-field'placeholder='Email Id' name="loginEmail" required >
+                <input type='password'class='input-field'placeholder='Enter Password' name="loginPass" required>
+                <button type='submit'class='submit-btn'>Log in</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x=document.getElementById('register');
+        var y=document.getElementById('login');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+        function login()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        
+    </script>
+    
+</body>
+</html>
